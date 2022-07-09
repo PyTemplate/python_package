@@ -44,19 +44,23 @@ clean:  ## clean all build, python, and testing files
 	rm -fr coverage.xml
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
+	rm -fr .mypy_cache
 
-# build: ## run tox / run tests and lint
-# 	tox
+lint: ## run autoformaters / linters
+	pre-commit run --all-files
+	flake8 src --count --show-source --statistics
+	pylint src -ry
+	mypy src
 
 clean-docs: ## remove the existing Sphinx documentation
 	$(MAKE) -C docs clean
 
-gen-docs: ## generate Sphinx HTML documentation, including API docs
+gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/python_package*.rst
 	rm -f docs/source/modules.rst
 	sphinx-apidoc -o docs/source src/python_package
 	$(MAKE) -C docs html
 
-docs: ## generate Sphinx HTML documentation, including API docs, and serve to browser
+docs: ## generate Sphinx HTML documentation and serve to browser
 	make gen-docs
 	$(BROWSER) docs/build/html/index.html
