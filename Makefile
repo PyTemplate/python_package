@@ -29,7 +29,7 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean:  ## clean all build, python, and testing files
+clean:  ## clean all build, python, testing, and documentation files
 	rm -fr build/
 	rm -fr dist/
 	rm -fr .eggs/
@@ -45,15 +45,13 @@ clean:  ## clean all build, python, and testing files
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 	rm -fr .mypy_cache
+	$(MAKE) -C docs clean
 
 lint: ## run autoformaters / linters
 	pre-commit run --all-files
 	flake8 src --count --show-source --statistics
 	pylint src -ry
 	mypy src
-
-clean-docs: ## remove the existing Sphinx documentation
-	$(MAKE) -C docs clean
 
 gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/python_package*.rst

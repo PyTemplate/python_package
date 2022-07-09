@@ -22,7 +22,7 @@ jobs:
       run: poetry install
     - name: Generate Docs
       run: |
-        make gen-docs
+        poetry run make gen-docs
         touch docs/build/html/.nojekyll
     - name: Publish Docs
       uses: JamesIves/github-pages-deploy-action@3.7.1
