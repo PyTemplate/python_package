@@ -18,7 +18,7 @@ sys.path.insert(0, os.path.abspath("../../src"))
 
 # -- Project information -----------------------------------------------------
 
-project = "PyTemplates"
+project = "python_package"
 copyright = "2022, Jacob Crabtree"
 author = "Jacob Crabtree"
 

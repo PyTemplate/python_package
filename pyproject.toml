@@ -1,8 +1,8 @@
 [tool.poetry]
-name = "pytemplates"
+name = "python_package"
 version = "1.0.0"
 description = "A simple template for a python CLI."
-repository = "https://github.com/crabtr26/pytemplates"
+repository = "https://github.com/PyTemplate/python_package"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
 license = "CC0 v1.0 Universal"
 readme = "README.md"
@@ -30,7 +30,6 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
 minversion = "7.1"
-asyncio_mode = "auto"
 addopts = "-rf -vv --cov=src --cov-report=term-missing"
 testpaths = [
     "tests",
