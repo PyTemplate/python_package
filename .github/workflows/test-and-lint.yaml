@@ -23,7 +23,7 @@ jobs:
     - name: Run tests and collect coverage
       run: poetry run pytest
     - name: Generate JSON report
-      run: coverage json
+      run: poetry run coverage json
     - name: Upload codecov
       uses: codecov/codecov-action@v1
 
