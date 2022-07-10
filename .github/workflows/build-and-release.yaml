@@ -64,14 +64,22 @@ jobs:
     - name: Generate Docs
       run: |
         poetry run make gen-docs
-        touch docs/build/html/.nojekyll
     - name: Publish Docs
       uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         BASE_BRANCH: main # The branch the action should deploy from.
         BRANCH: sphinx-docs # The branch the action should deploy to.
         FOLDER: docs/build/html/ # The folder the action should deploy.
+
+  create-release:
+    needs: [test, lint]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ncipollo/release-action@v1
 
   # publish-package:
   #   needs: [test, lint, publish-docs]
