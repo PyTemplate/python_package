@@ -68,4 +68,4 @@ pre-release: ## increment the version and release the package
 	git push
 	echo Tag $(git describe --tags --abbrev=0) is ready to be released.
 	echo To trigger the release pipeline, push the tag using the command:
-	echo git push --tags 
+	echo git push --tags
