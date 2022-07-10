@@ -1,9 +1,9 @@
-name: Build Package and Publish to PyPI
+name: Build and Release
 
-on:
+on: 
   push:
-    branches:
-      - main
+    tags:
+    - '*'
 
 jobs:
   test:
