@@ -15,7 +15,8 @@
 [![codecov](https://codecov.io/gh/PyTemplate/python_package/branch/main/graph/badge.svg?token=HG1NQ8HRA4)](https://codecov.io/gh/PyTemplate/python_package)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/PyTemplate/python_package/main.svg)](https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main)
 [![PyPI version](https://badge.fury.io/py/pytemplates_pypackage.svg)](https://pypi.org/project/pytemplates-pypackage/)
-[![release workflow](https://github.com/PyTemplate/python_package/actions/workflows/test-and-lint.yaml/badge.svg)](https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++)
+[![test workflow](https://github.com/PyTemplate/python_package/actions/workflows/test-and-lint.yaml/badge.svg)](https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++)
+[![release workflow](https://github.com/PyTemplate/python_package/actions/workflows/build-and-release.yaml/badge.svg)](https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++)
 
 
 ## Description
