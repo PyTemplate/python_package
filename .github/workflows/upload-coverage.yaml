@@ -17,7 +17,7 @@ jobs:
     - uses: actions/checkout@v1
     - run: pwd
     - run: ls -a
-    - uses: ./.github/workflows/test.yaml
+    - uses: ./.github/workflows/test
 
 
   lint:
@@ -25,4 +25,4 @@ jobs:
 
     steps:
     - uses: actions/checkout@v1
-    - uses: ./.github/workflows/lint.yaml
+    - uses: ./.github/workflows/lint
