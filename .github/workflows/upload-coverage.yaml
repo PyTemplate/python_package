@@ -16,11 +16,11 @@ jobs:
     steps:
     - run: pwd
     - run: ls -l
-    - uses: ./test.yaml
+    - uses: ./.github/workflows/test.yaml
 
 
   lint:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: ./lint.yaml
+    - uses: ./.github/workflows/lint.yaml
