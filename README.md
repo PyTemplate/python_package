@@ -14,15 +14,15 @@
   <a href="https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++">
     <img src="https://github.com/PyTemplate/python_package/actions/workflows/test-and-lint.yaml/badge.svg" alt="Test and lint status">
   </a>
-  
+
   <a href="https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main">
     <img src="https://results.pre-commit.ci/badge/github/PyTemplate/python_package/main.svg" alt="pre-commit.ci status">
   </a>
-  
+
   <a href="https://codecov.io/gh/PyTemplate/python_package">
     <img src="https://codecov.io/gh/PyTemplate/python_package/branch/main/graph/badge.svg?token=HG1NQ8HRA4" alt="Code coverage status">
   </a>
-  
+
   <a href="https://pypi.org/project/pytemplates-pypackage/">
     <img src="https://badge.fury.io/py/pytemplates_pypackage.svg" alt="PyPI version">
   </a>
