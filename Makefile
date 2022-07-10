@@ -53,6 +53,10 @@ lint: ## run autoformaters / linters
 	pylint src -ry
 	mypy src
 
+check: ## run tests / autoformaters / linters
+	pytest
+	make lint
+
 gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/python_package*.rst
 	rm -f docs/source/modules.rst
@@ -64,11 +68,15 @@ docs: ## generate Sphinx HTML documentation and serve to browser
 	$(BROWSER) docs/build/html/index.html
 
 pre-release: ## increment the version and create the release tag
-	bump2version $(part)
+	make check
+	make gen-docs
+	make clean
+	bump2version $(increment)
 	git push
 	git describe --tags --abbrev=0
 	head pyproject.toml | grep version
 	cat src/pytemplates_pypackage/__version__.py
+	git tag
 
 release: ## push the release tag and trigger the release pipeline
 	git push --tags
