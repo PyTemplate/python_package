@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "python_package"
-version = "1.0.0"
+version = "0.1.0"
 description = "A simple template for a python CLI."
 repository = "https://github.com/PyTemplate/python_package"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
