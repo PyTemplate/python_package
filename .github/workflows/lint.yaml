@@ -1,0 +1,21 @@
+name: Run Linters
+
+on:
+  workflow_call:
+
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
+    - name: Install Poetry
+      uses: snok/install-poetry@v1
+    - name: Install python_package
+      run: poetry install --extras=lint
+    - name: Run linters
+      run: poetry run make lint

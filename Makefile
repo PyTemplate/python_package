@@ -56,7 +56,7 @@ lint: ## run autoformaters / linters
 gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/python_package*.rst
 	rm -f docs/source/modules.rst
-	sphinx-apidoc -o docs/source src/python_package
+	sphinx-apidoc -o docs/source src/pytemplates_pypackage
 	$(MAKE) -C docs html
 
 docs: ## generate Sphinx HTML documentation and serve to browser

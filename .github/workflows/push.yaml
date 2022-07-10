@@ -1,0 +1,23 @@
+name: Test, Lint, and Upload Coverage Report
+
+on:
+  push:
+    branches:
+    - main
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.8]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+    - uses: ./.github/workflows/update_coverage.yaml
+
+  lint:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: ./.github/workflows/lint.yaml

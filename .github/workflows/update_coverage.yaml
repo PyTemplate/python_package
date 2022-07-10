@@ -1,0 +1,19 @@
+name: Run Tests
+
+on:
+  workflow_call:
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        python-version: [3.8]
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+    - uses: ./.github/workflows/test.yaml
+    - name: Generate JSON report
+      run: poetry run coverage json
+    - name: Upload codecov
+      uses: codecov/codecov-action@v1

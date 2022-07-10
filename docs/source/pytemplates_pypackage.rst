@@ -1,5 +1,5 @@
-python\_package package
-=======================
+pytemplates\_pypackage package
+==============================
 
 Subpackages
 -----------
@@ -7,12 +7,12 @@ Subpackages
 .. toctree::
    :maxdepth: 4
 
-   python_package.core
+   pytemplates_pypackage.core
 
 Module contents
 ---------------
 
-.. automodule:: python_package
+.. automodule:: pytemplates_pypackage
    :members:
    :undoc-members:
    :show-inheritance:
