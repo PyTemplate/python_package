@@ -12,18 +12,49 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = "^3.8"
+pytest = {version = "^7.1.2", optional = true}
+pytest-cov = {version = "^3.0.0", optional = true}
+black = {version = "^22.3.0", optional = true}
+isort = {version = "^5.10.1", optional = true}
+flake8 = {version = "^4.0.1", optional = true}
+pylint = {version = "^2.13.8", optional = true}
+mypy = {version = "^0.961", optional = true}
+pre-commit = {version = "^2.19.0", optional = true}
+Sphinx = {version = "^4.5.0", optional = true}
+sphinx-rtd-theme = {version = "^1.0.0", optional = true}
 
-[tool.poetry.dev-dependencies]
-black = "^22.3.0"
-isort = "^5.10.1"
-flake8 = "^4.0.1"
-pylint = "^2.13.8"
-mypy = "^0.961"
-pytest = "^7.1.2"
-pytest-cov = "^3.0.0"
-pre-commit = "^2.19.0"
-Sphinx = "^4.5.0"
-sphinx-rtd-theme = "^1.0.0"
+[tool.poetry.extras]
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+lint = [
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy",
+    "pre-commit",
+]
+
+docs = [
+    "Sphinx",
+    "sphinx-rtd-theme",
+]
+
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy",
+    "pre-commit",
+    "Sphinx",
+    "sphinx-rtd-theme",
+]
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
