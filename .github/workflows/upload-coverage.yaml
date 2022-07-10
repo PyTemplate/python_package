@@ -15,7 +15,8 @@ jobs:
 
     steps:
     - run: pwd
-    - run: ls -l
+    - run: ls
+    - uses: actions/checkout@v1
     - uses: ./.github/workflows/test.yaml
 
 
@@ -23,4 +24,5 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
     - uses: ./.github/workflows/lint.yaml
