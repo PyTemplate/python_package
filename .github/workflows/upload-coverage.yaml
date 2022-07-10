@@ -14,11 +14,11 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
-    - uses: Pytemplates/python_package/.github/workflows/test.yaml
+    - uses: ./test.yaml
 
 
   lint:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: Pytemplates/python_package/.github/workflows/lint.yaml
+    - uses: ./lint.yaml
