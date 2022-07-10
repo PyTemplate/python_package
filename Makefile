@@ -62,3 +62,15 @@ gen-docs: ## generate Sphinx HTML documentation
 docs: ## generate Sphinx HTML documentation and serve to browser
 	make gen-docs
 	$(BROWSER) docs/build/html/index.html
+
+release: ## increment the version and release the package
+	poetry version $(version)
+	echo __version__ = '"'$(version)'"' > src/pytemplates_pypackage/__version__.py
+	git add pyproject.toml
+	git add src/pytemplates_pypackage/__version__.py
+	pytest
+	make lint
+	make clean
+	git commit -m "Release version $(version)"
+	git tag v$(version)
+	git push --tags
