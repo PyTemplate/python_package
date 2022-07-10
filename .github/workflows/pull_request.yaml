@@ -14,10 +14,12 @@ jobs:
         os: [ubuntu-latest, windows-latest, macOS-latest]
 
     steps:
+    - uses: actions/checkout@v1
     - uses: ./.github/workflows/test.yaml
 
   lint:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v1
     - uses: ./.github/workflows/lint.yaml
