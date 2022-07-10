@@ -1,7 +1,8 @@
 def greet(user: str) -> str:
     """Greet the user!
 
-    A long description for the greet function.
+    A long description for the greet function. With an addition from the feature
+    branch.
 
     Args:
         user: The name of the user.
