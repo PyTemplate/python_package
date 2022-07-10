@@ -63,14 +63,9 @@ docs: ## generate Sphinx HTML documentation and serve to browser
 	make gen-docs
 	$(BROWSER) docs/build/html/index.html
 
-release: ## increment the version and release the package
-	poetry version $(version)
-	echo __version__ = '"'$(version)'"' > src/pytemplates_pypackage/__version__.py
-	git add pyproject.toml
-	git add src/pytemplates_pypackage/__version__.py
-	pytest
-	make lint
-	make clean
-	git commit -m "Release version $(version)"
-	git tag v$(version)
-	git push --tags
+pre-release: ## increment the version and release the package
+	bump2version $(part)
+	git push
+	echo Tag $(git describe --tags --abbrev=0) is ready to be released.
+	echo To trigger the release pipeline, push the tag using the command:
+	echo git push --tags 
