@@ -15,6 +15,7 @@
 [![release workflow](https://github.com/PyTemplate/python_package/actions/workflows/release.yaml/badge.svg)](https://github.com/PyTemplate/python_package/releases/latest)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/PyTemplate/python_package/main.svg)](https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main)
 [![codecov](https://codecov.io/gh/PyTemplate/python_package/branch/main/graph/badge.svg?token=HG1NQ8HRA4)](https://codecov.io/gh/PyTemplate/python_package)
+[![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
 [![Documentation: Sphinx](https://img.shields.io/badge/Documentation-Sphinx-08476D?style=flat)](https://pytemplate.github.io/python_package/)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-151515?style=flat)](https://github.com/psf/black)
 [![PyPI version](https://badge.fury.io/py/pytemplates_pypackage.svg)](https://pypi.org/project/pytemplates-pypackage/)
