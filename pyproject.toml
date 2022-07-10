@@ -62,10 +62,6 @@ dev = [
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
-# [tool.poetry-dynamic-versioning]
-# enable = true
-# format = "{base}"
-
 [tool.pytest.ini_options]
 minversion = "7.1"
 addopts = "-rf -vv --cov=src --cov-report=term-missing"

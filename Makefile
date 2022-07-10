@@ -67,6 +67,7 @@ pre-release: ## increment the version and create the release tag
 	bump2version $(part)
 	git push
 	git describe --tags --abbrev=0
+	head pyproject.toml | grep version
 	cat src/pytemplates_pypackage/__version__.py
 
 release: ## push the release tag and trigger the release pipeline
