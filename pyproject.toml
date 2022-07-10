@@ -62,6 +62,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry-dynamic-versioning]
 enable = true
+format = "base"
 
 [tool.pytest.ini_options]
 minversion = "7.1"
