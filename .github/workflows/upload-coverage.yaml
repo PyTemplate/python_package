@@ -1,7 +1,7 @@
-name: Test and Lint
+name: Test, Lint, and Upload Coverage Report
 
 on:
-  pull_request:
+  push:
     branches:
     - main
 
