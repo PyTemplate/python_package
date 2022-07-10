@@ -10,15 +10,23 @@
 ```
 <!-- source - https://patorjk.com/software/taag/#p=display&h=1&f=Ogre&t=PyTemplates -->
 
-[![test workflow](https://github.com/PyTemplate/python_package/actions/workflows/test-and-lint.yaml/badge.svg)](https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++)
-[![documentation workflow](https://github.com/PyTemplate/python_package/actions/workflows/pages/pages-build-deployment/badge.svg)](https://pytemplate.github.io/python_package/)
-[![release workflow](https://github.com/PyTemplate/python_package/actions/workflows/release.yaml/badge.svg)](https://github.com/PyTemplate/python_package/releases/latest)
-[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/PyTemplate/python_package/main.svg)](https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main)
-[![codecov](https://codecov.io/gh/PyTemplate/python_package/branch/main/graph/badge.svg?token=HG1NQ8HRA4)](https://codecov.io/gh/PyTemplate/python_package)
-[![License](https://img.shields.io/badge/License-Creative%20Commons%20Zero%20v1.0-informational?style=flat)](./LICENSE)
-[![Documentation: Sphinx](https://img.shields.io/badge/Documentation-Sphinx-08476D?style=flat)](https://pytemplate.github.io/python_package/)
-[![Code style: black](https://img.shields.io/badge/code%20style-black-151515?style=flat)](https://github.com/psf/black)
-[![PyPI version](https://badge.fury.io/py/pytemplates_pypackage.svg)](https://pypi.org/project/pytemplates-pypackage/)
+<p align="center">
+  <a href="https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++">
+    <img src="https://github.com/PyTemplate/python_package/actions/workflows/test-and-lint.yaml/badge.svg" alt="Test and lint status">
+  </a>
+  
+  <a href="https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main">
+    <img src="https://results.pre-commit.ci/badge/github/PyTemplate/python_package/main.svg" alt="pre-commit.ci status">
+  </a>
+  
+  <a href="https://codecov.io/gh/PyTemplate/python_package">
+    <img src="https://codecov.io/gh/PyTemplate/python_package/branch/main/graph/badge.svg?token=HG1NQ8HRA4" alt="Code coverage status">
+  </a>
+  
+  <a href="https://pypi.org/project/pytemplates-pypackage/">
+    <img src="https://badge.fury.io/py/pytemplates_pypackage.svg" alt="PyPI version">
+  </a>
+</p>
 
 ## Description
 
