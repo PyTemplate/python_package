@@ -117,7 +117,7 @@ dev = [
 
 `make test` - Run the tests using pytest.
 
-`make check` - Run the lint, test, and clean commands.
+`make check` - Run the lint and test commands, followed by the clean command.
 
 `make gen-docs` - Generate Sphinx HTML documentation.
 
