@@ -80,7 +80,3 @@ pre-release: ## bump the version and create the release tag
 	git describe --tags --abbrev=0
 	head pyproject.toml | grep version
 	cat src/pytemplates_pypackage/__version__.py
-	git tag
-
-release: ## push the release tag and trigger the release pipeline
-	git push --tags
