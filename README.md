@@ -28,7 +28,16 @@
 
 ## Description
 
-A basic python package template which includes proper package structure with a functioning package installation. The package is built using poetry; metadata and dependency information is stored in the pyproject.toml. This template includes flake8, pylint, isort, and pytest settings with configurations compatible with the black autoformatter. Pylint settings are based on the Google style standards for python and adapted for black compatibility.  Testing is automated using github workflows, codecov.io, and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy cycles.
+A production ready python library template. Features include:
+
+- Metadata and dependency information stored in the pyproject.toml for pip and poetry compatibility.
+- Flake8, pylint, isort, and pytest configurations compatible with the black autoformatter.
+- Pylint settings based on the Google style standards for python and adapted for black compatibility.
+- Automated linting before each commit using pre-commit, black, and isort.
+- Automated testing and coverage reporting on every commit and pull request using pytest-cov and codecov.io.
+- Automated source code documentation using Sphinx and github pages.
+- Automated package deployments to PyPI using github workflows.
+
 
 ## Installation
 
