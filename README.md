@@ -44,6 +44,9 @@ A production ready python library template.
 - [Sphinx](https://www.sphinx-doc.org/en/master/) documentation is automatically generated and deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
+## Documentation
+[Source code documentation](https://pytemplate.github.io/python_package/)
+
 ## Installation
 
 To install the package using `pip`:
