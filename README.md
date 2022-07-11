@@ -40,7 +40,7 @@ A production ready python library template. Features include:
 - Automated linting before each commit using [pre-commit](https://pre-commit.com/), black, and isort.
 - Automated testing and coverage reports on every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/), [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/), and [codecov.io](https://about.codecov.io/). Unit tests are written using [pytest](https://docs.pytest.org/en/latest/) and static type checking is provided by [mypy](http://mypy-lang.org/index.html).
 - Automated package deployments to [PyPI](https://pypi.org/) with dynamic versioning provided by [bump2version](https://github.com/c4urself/bump2version).
-- Documentation automatically generated and deployed on every release using [Sphinx](https://www.sphinx-doc.org/en/master/), hosted on [github pages](https://docs.github.com/en/pages).
+- [Sphinx](https://www.sphinx-doc.org/en/master/) documentation automatically generated and deployed to [github pages](https://docs.github.com/en/pages) on every release.
 - Release notes automatically generated on every release using [github actions](https://docs.github.com/en/actions).
 
 ## Installation
