@@ -48,16 +48,16 @@ clean:  ## remove all build, testing, and static documentation files
 	rm -fr .mypy_cache
 	$(MAKE) -C docs clean
 
-lint: ## run autoformaters and linters
+lint: ## run the linting tools
 	pre-commit run --all-files
 	flake8 src --count --show-source --statistics
 	pylint src -ry
 	mypy src
 
-test: ## run tests
+test: ## run the tests
 	pytest
 
-check: ## run linters and tests, then cleanup
+check: ## run the linting tools and tests, then cleanup
 	make lint
 	make test
 	make clean
@@ -68,7 +68,7 @@ gen-docs: ## generate Sphinx HTML documentation
 	sphinx-apidoc -o docs/source src/pytemplates_pypackage
 	$(MAKE) -C docs html
 
-docs: ## generate Sphinx HTML documentation and serve to browser
+docs: ## generate Sphinx HTML documentation and serve it to the browser
 	make gen-docs
 	$(BROWSER) docs/build/html/index.html
 
