@@ -13,8 +13,8 @@
     <img src="https://github.com/PyTemplate/python_package/actions/workflows/lint.yaml/badge.svg" alt="Linting status">
   </a>
 
-  <a href="https://github.com/PyTemplate/python_package/actions/workflows/build-and-release.yaml">
-    <img src="https://github.com/PyTemplate/python_package/actions/workflows/build-and-release.yaml/badge.svg" alt="Build status">
+  <a href="https://github.com/PyTemplate/python_package/actions/workflows/release.yaml">
+    <img src="https://github.com/PyTemplate/python_package/actions/workflows/release.yaml/badge.svg" alt="Release status">
   </a>
 
   <a href="https://results.pre-commit.ci/latest/github/PyTemplate/python_package/main">
