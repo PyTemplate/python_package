@@ -40,7 +40,7 @@ Install the package using `poetry`:
 poetry install
 ```
 
-Install additional dependencies using the --extras flag:
+Install optional dependencies using the --extras flag:
 
 ```bash
 poetry install --extras={environment}
