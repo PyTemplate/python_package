@@ -30,7 +30,7 @@
 
 A production ready python library template. Features include:
 
-- Metadata and dependency information stored in the pyproject.toml for pip and poetry compatibility.
+- Metadata and dependency information stored in the pyproject.toml for compatibility with both pip and poetry.
 - Flake8, pylint, isort, and pytest configurations compatible with the black autoformatter.
 - Pylint settings based on the Google style standards for python and adapted for black compatibility.
 - Automated linting before each commit using pre-commit, black, and isort.
