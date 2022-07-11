@@ -129,11 +129,11 @@ dev = [
 
 ## Workflows
 
-`lint` - Run the autoformaters and linters on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
+`lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
-`test` - Run the tests on every push/pull_request to the *main* branch. Capture the coverage report using coverage.py and upload to codecov.io.
+`test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io.
 
-`build-and-release` - Build the package distribution, create a github release, and publish the distribution to PyPI upon tag creation. Linting and test steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
+`build-and-release` - Build a package distribution, create a github release, and publish the distribution to PyPI on every tag creation. Linting and testing steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
 
 ## File Tree
 

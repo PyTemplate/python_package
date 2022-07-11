@@ -77,7 +77,6 @@ pre-release: ## bump the version and create the release tag
 	make gen-docs
 	make clean
 	bump2version $(increment)
-	git push
 	git describe --tags --abbrev=0
 	head pyproject.toml | grep version
 	cat src/pytemplates_pypackage/__version__.py
