@@ -53,31 +53,19 @@ from pytemplates import wish_farewell
 wish_farewell(user="Jacob")
 ```
 
-## Development Setup
+## Commands
 
-Using `poetry`:
+`make clean`                clean all build, testing, and static documentation files
+`make lint`                 run autoformaters and linters
+`make test`                 run tests
+`make check`                run linters and tests, then cleanup
+`make gen-docs`             generate Sphinx HTML documentation
+`make docs`                 generate Sphinx HTML documentation and serve to browser
+`make pre-release`          bump the version and create the release tag
+`make release`              push the release tag and trigger the release pipeline
 
-```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-poetry install
-```
+## Workflows
 
-## Testing
-
-To run the tests locally using the development environment:
-
-```bash
-cd pytemplates
-poetry run pytest
-```
-
-## Documentation
-
-To build and view the documentation locally using the development environment:
-
-```bash
-cd pytemplates/docs
-make html
-google-chrome build/html/index.html
-```
+`lint`                      run autoformaters and linters on every push/pull_request to the *main* branch
+`test`                      run tests on every push/pull_request to the *main* branch
+`build-and-release`         release the package on PyPI upon tag creation

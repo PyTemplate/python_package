@@ -29,7 +29,7 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean:  ## clean all build, python, testing, and documentation files
+clean:  ## clean all build, testing, and static documentation files
 	rm -fr build/
 	rm -fr dist/
 	rm -fr .eggs/
@@ -48,11 +48,19 @@ clean:  ## clean all build, python, testing, and documentation files
 	rm -fr .mypy_cache
 	$(MAKE) -C docs clean
 
-lint: ## run autoformaters / linters
+lint: ## run autoformaters and linters
 	pre-commit run --all-files
 	flake8 src --count --show-source --statistics
 	pylint src -ry
 	mypy src
+
+test: ## run tests
+	pytest
+
+check: ## run linters and tests, then cleanup
+	make lint
+	make test
+	make clean
 
 gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/pytemplates_pypackage*.rst
@@ -64,12 +72,7 @@ docs: ## generate Sphinx HTML documentation and serve to browser
 	make gen-docs
 	$(BROWSER) docs/build/html/index.html
 
-check: ## run tests / autoformaters / linters / gen-docs
-	make lint
-	pytest
-	make clean
-
-pre-release: ## increment the version and create the release tag
+pre-release: ## bump the version and create the release tag
 	make check
 	make gen-docs
 	make clean
