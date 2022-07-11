@@ -45,7 +45,6 @@
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
 ### [Source code documentation](https://pytemplate.github.io/python_package/)
-### [Releases](https://github.com/PyTemplate/python_package/releases)
 
 ## Installation
 
@@ -159,6 +158,8 @@ A release should consist of the following three steps from a clean, up to date, 
 2. `git push` - Update the *main* branch with only the changes from the version bump. Wait until the test and lint workflows have completed successfully before starting the build-and-release workflow.
 
 3. `git push --tags` - Publish the new tag to kick off the build-and-release workflow.
+
+### [Releases](https://github.com/PyTemplate/python_package/releases)
 
 ## File Tree
 
