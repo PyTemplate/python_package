@@ -30,13 +30,13 @@
 
 A production ready python library template. Features include:
 
-- Metadata and dependency information stored in the pyproject.toml for compatibility with both pip and poetry.
-- Flake8, pylint, isort, and pytest configurations compatible with the black autoformatter.
-- Pylint settings based on the Google style standards for python and adapted for black compatibility.
-- Automated linting before each commit using pre-commit, black, and isort.
-- Automated testing and coverage reporting on every commit and pull request using pytest-cov and codecov.io.
-- Automated source code documentation using Sphinx and github pages.
-- Automated package deployments to PyPI using github workflows.
+- Metadata and dependency information stored in the pyproject.toml for compatibility with both [pip]() and [poetry]().
+- [Flake8](), [pylint](), [isort](), and [pytest]() configurations compatible with the [black]() autoformatter.
+- Pylint settings based on the [Google style standards]() for python and adapted for black compatibility.
+- Automated linting before each commit using [pre-commit](), black, and isort.
+- Automated testing and coverage reporting on every commit and pull request using [pytest-cov]() and [codecov.io]().
+- Automated source code documentation using [Sphinx]() and [github pages]().
+- Automated package deployments to [PyPI]() using [github workflows]().
 
 
 ## Installation
