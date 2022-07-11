@@ -32,13 +32,14 @@
 
 ## Description
 
-A production ready python library template. Features include:
+A production ready python library template.
 
-- Metadata and dependency information stored in the pyproject.toml for compatibility with both [pip](https://pip.pypa.io/en/stable/) and [poetry](https://python-poetry.org/docs/).
+- Metadata and dependency information is stored in the pyproject.toml for compatibility with both [pip](https://pip.pypa.io/en/stable/) and [poetry](https://python-poetry.org/docs/).
 - [Flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/index.html), [isort](https://pycqa.github.io/isort/), and [pytest](https://docs.pytest.org/en/latest/) configurations compatible with the [black](https://black.readthedocs.io/en/stable/) autoformatter.
 - Pylint settings based on the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) and adapted for black compatibility.
 - Automated linting before each commit using [pre-commit](https://pre-commit.com/), black, and isort.
-- Automated testing and coverage reports on every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/), [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/), and [codecov.io](https://about.codecov.io/). Unit tests are written using [pytest](https://docs.pytest.org/en/latest/) and static type checking is provided by [mypy](http://mypy-lang.org/index.html).
+- Automated testing and coverage reports on every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/), [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/), and [codecov.io](https://about.codecov.io/).
+- Unit tests written using [pytest](https://docs.pytest.org/en/latest/) and static type checking provided by [mypy](http://mypy-lang.org/index.html).
 - Automated package deployments to [PyPI](https://pypi.org/) with dynamic versioning provided by [bump2version](https://github.com/c4urself/bump2version).
 - [Sphinx](https://www.sphinx-doc.org/en/master/) documentation automatically generated and deployed to [github pages](https://docs.github.com/en/pages) on every release.
 - Release notes automatically generated on every release using [github actions](https://docs.github.com/en/actions).
