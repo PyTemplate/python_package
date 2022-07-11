@@ -30,14 +30,51 @@
 
 A basic python package template which includes proper package structure with a functioning package installation. The package is built using poetry; metadata and dependency information is stored in the pyproject.toml. This template includes flake8, pylint, isort, and pytest settings with configurations compatible with the black autoformatter. Pylint settings are based on the Google style standards for python and adapted for black compatibility.  Testing is automated using github workflows, codecov.io, and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy cycles.
 
+## Environments
+
+```python
+test = [
+    "pytest",
+    "pytest-cov",
+]
+
+lint = [
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy",
+    "pre-commit",
+]
+
+docs = [
+    "Sphinx",
+    "sphinx-rtd-theme",
+]
+
+dev = [
+    "pytest",
+    "pytest-cov",
+    "black",
+    "isort",
+    "flake8",
+    "pylint",
+    "mypy",
+    "pre-commit",
+    "Sphinx",
+    "sphinx-rtd-theme",
+    "bump2version",
+]
+```
+
 ## Setup
+
+All commands should be run from inside the project home (i.e. the location of this README).
 
 Using `poetry`:
 
 ```bash
-git clone https://github.com/crabtr26/pytemplates.git
-cd pytemplates
-poetry install --no-dev
+poetry install --extras={environment}
 ```
 
 ## Usage
@@ -63,13 +100,13 @@ wish_farewell(user="Jacob")
 
 `make check` - Run the lint, test, and clean commands.
 
-`make gen-docs` - Generate Sphinx HTML documentation
+`make gen-docs` - Generate Sphinx HTML documentation.
 
-`make docs` - Generate Sphinx HTML documentation and serve to the browser.
+`make docs` - Generate Sphinx HTML documentation and serve it to the browser.
 
 `make pre-release` - Bump the version and create the release tag.
 
-`make release` - push the release tag and trigger the release pipeline
+`make release` - Push the release tag and trigger the release pipeline.
 
 ## Workflows
 
