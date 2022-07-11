@@ -59,7 +59,7 @@ wish_farewell(user="Jacob")
 
 ## Developer Setup
 
-Commands should be run from inside the project home folder (i.e. the location of this README).
+Commands should be run from inside the project home folder (i.e. the location of this README) after cloning this repository.
 
 Install the package using `poetry`:
 
