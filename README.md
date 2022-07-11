@@ -46,7 +46,7 @@ Install optional dependencies using the `--extras` flag:
 poetry install --extras={environment}
 ```
 
-#### Environments
+### Environments
 
 ```python
 test = [
