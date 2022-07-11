@@ -30,30 +30,6 @@
 
 A basic python package template which includes proper package structure with a functioning package installation. The package is built using poetry; metadata and dependency information is stored in the pyproject.toml. This template includes flake8, pylint, isort, and pytest settings with configurations compatible with the black autoformatter. Pylint settings are based on the Google style standards for python and adapted for black compatibility.  Testing is automated using github workflows, codecov.io, and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy cycles.
 
-### File Tree
-
-```bash
-.
-├── docs/
-├── LICENSE
-├── Makefile
-├── poetry.lock
-├── pyproject.toml
-├── README.md
-├── src
-│   └── pytemplates_pypackage
-│       ├── core
-│       │   ├── __init__.py
-│       │   ├── module1.py
-│       │   └── module2.py
-│       ├── __init__.py
-│       └── __version__.py
-└── tests
-    ├── __init__.py
-    ├── test_module1.py
-    └── test_module2.py
-```
-
 ## Installation
 
 To install the package using `pip`:
@@ -160,3 +136,27 @@ dev = [
 `test` - Run the tests on every push/pull_request to the *main* branch. Capture the coverage report using coverage.py and upload to codecov.io.
 
 `build-and-release` - Build the package distribution, create a github release, and publish the distribution to PyPI upon tag creation. Linting and test steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
+
+## File Tree
+
+```bash
+.
+├── docs/
+├── LICENSE
+├── Makefile
+├── poetry.lock
+├── pyproject.toml
+├── README.md
+├── src
+│   └── pytemplates_pypackage
+│       ├── core
+│       │   ├── __init__.py
+│       │   ├── module1.py
+│       │   └── module2.py
+│       ├── __init__.py
+│       └── __version__.py
+└── tests
+    ├── __init__.py
+    ├── test_module1.py
+    └── test_module2.py
+```
