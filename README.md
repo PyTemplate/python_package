@@ -34,18 +34,7 @@ A basic python package template which includes proper package structure with a f
 
 ```bash
 .
-├── docs
-│   ├── build
-│   ├── make.bat
-│   ├── Makefile
-│   └── source
-│       ├── conf.py
-│       ├── index.rst
-│       ├── modules.rst
-│       ├── pytemplates_pypackage.core.rst
-│       ├── pytemplates_pypackage.rst
-│       ├── _static
-│       └── _templates
+├── docs/
 ├── LICENSE
 ├── Makefile
 ├── poetry.lock
