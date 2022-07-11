@@ -29,7 +29,7 @@ BROWSER := python -c "$$BROWSER_PYSCRIPT"
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
-clean:  ## clean all build, testing, and static documentation files
+clean:  ## remove all build, testing, and static documentation files
 	rm -fr build/
 	rm -fr dist/
 	rm -fr .eggs/

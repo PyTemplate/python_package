@@ -55,26 +55,26 @@ wish_farewell(user="Jacob")
 
 ## Commands
 
-`make clean` - clean all build, testing, and static documentation files
+`make clean` - Remove all build, testing, and static documentation files.
 
-`make lint` - run autoformaters and linters
+`make lint` - Run the autoformaters and linters. Includes pre-commit hooks, flake8, pylint, and mypy.
 
-`make test` - run tests
+`make test` - Run the tests using pytest.
 
-`make check` - run linters and tests, then cleanup
+`make check` - Run the lint, test, and clean commands.
 
-`make gen-docs` - generate Sphinx HTML documentation
+`make gen-docs` - Generate Sphinx HTML documentation
 
-`make docs` - generate Sphinx HTML documentation and serve to browser
+`make docs` - Generate Sphinx HTML documentation and serve to the browser.
 
-`make pre-release` - bump the version and create the release tag
+`make pre-release` - Bump the version and create the release tag.
 
 `make release` - push the release tag and trigger the release pipeline
 
 ## Workflows
 
-`lint` - run autoformaters and linters on every push/pull_request to the *main* branch
+`lint` - Run the autoformaters and linters on every push/pull_request to the *main* branch.
 
-`test` - run tests on every push/pull_request to the *main* branch
+`test` - Run the tests on every push/pull_request to the *main* branch. Capture the coverage report using coverage.py and upload to codecov.io.
 
-`build-and-release` - release the package on PyPI upon tag creation
+`build-and-release` - Build the package distribution, create a github release, and publish the distribution to PyPI upon tag creation. Linting and test steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
