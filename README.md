@@ -30,6 +30,20 @@
 
 A basic python package template which includes proper package structure with a functioning package installation. The package is built using poetry; metadata and dependency information is stored in the pyproject.toml. This template includes flake8, pylint, isort, and pytest settings with configurations compatible with the black autoformatter. Pylint settings are based on the Google style standards for python and adapted for black compatibility.  Testing is automated using github workflows, codecov.io, and pre-commit.ci. Application deployment is managed using multi-staged docker builds for fast develop/deploy cycles.
 
+## Installation
+
+To install the package using `pip`:
+
+```bash
+pip install pytemplates_pypackage
+```
+
+To add the package as a dependency using `poetry`:
+
+```bash
+poetry add pytemplates_pypackage
+```
+
 ## Usage
 
 From a `.py` file:
@@ -43,7 +57,7 @@ from pytemplates import wish_farewell
 wish_farewell(user="Jacob")
 ```
 
-## Setup
+## Developer Setup
 
 Commands should be run from inside the project home folder (i.e. the location of this README).
 
