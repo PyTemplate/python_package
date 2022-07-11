@@ -11,11 +11,11 @@
 <!-- source - https://patorjk.com/software/taag/#p=display&h=1&f=Ogre&t=PyTemplates -->
 
 <p align="center">
-  <a href="https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++">
+  <a href="https://github.com/PyTemplate/python_package/actions/workflows/test.yaml">
     <img src="https://github.com/PyTemplate/python_package/actions/workflows/test.yaml/badge.svg" alt="Test status">
   </a>
 
-  <a href="https://github.com/PyTemplate/python_package/actions?query=workflow%3A%22Test+and+Lint%22++">
+  <a href="https://github.com/PyTemplate/python_package/actions/workflows/lint.yaml">
     <img src="https://github.com/PyTemplate/python_package/actions/workflows/lint.yaml/badge.svg" alt="Linting status">
   </a>
 
