@@ -34,7 +34,13 @@ A basic python package template which includes proper package structure with a f
 
 Commands should be run from inside the project home (i.e. the location of this README).
 
-Using `poetry`:
+Install the package using `poetry`:
+
+```bash
+poetry install
+```
+
+Install additional dependencies using the --extras flag:
 
 ```bash
 poetry install --extras={environment}
