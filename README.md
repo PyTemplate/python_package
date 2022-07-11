@@ -45,6 +45,7 @@
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
 ### [Source code documentation](https://pytemplate.github.io/python_package/)
+### [Releases](https://github.com/PyTemplate/python_package/releases)
 
 ## Installation
 
