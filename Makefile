@@ -39,6 +39,7 @@ clean:  ## remove all build, testing, and static documentation files
 	find . -name '*.pyo' -exec rm -f {} +
 	find . -name '*~' -exec rm -f {} +
 	find . -name '__pycache__' -exec rm -fr {} +
+	find . -name '.ipynb_checkpoints' -exec rm -fr {} +
 	rm -fr .tox/
 	rm -fr .coverage
 	rm -fr coverage.xml
