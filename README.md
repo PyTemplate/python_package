@@ -59,8 +59,6 @@ wish_farewell(user="Jacob")
 
 ## Developer Setup
 
-Commands should be run from inside the project home folder (i.e. the location of this README) after cloning this repository.
-
 Install the package using `poetry`:
 
 ```bash
@@ -115,7 +113,7 @@ dev = [
 
 `make clean` - Remove all build, testing, and static documentation files.
 
-`make lint` - Run the autoformaters and linters. Includes pre-commit hooks, flake8, pylint, and mypy.
+`make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
 `make test` - Run the tests using pytest.
 
@@ -131,7 +129,7 @@ dev = [
 
 ## Workflows
 
-`lint` - Run the autoformaters and linters on every push/pull_request to the *main* branch.
+`lint` - Run the autoformaters and linters on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
 `test` - Run the tests on every push/pull_request to the *main* branch. Capture the coverage report using coverage.py and upload to codecov.io.
 
