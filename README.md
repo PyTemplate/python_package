@@ -30,14 +30,13 @@
 
 A production ready python library template. Features include:
 
-- Metadata and dependency information stored in the pyproject.toml for compatibility with both [pip]() and [poetry]().
-- [Flake8](), [pylint](), [isort](), and [pytest]() configurations compatible with the [black]() autoformatter.
-- Pylint settings based on the [Google style standards]() for python and adapted for black compatibility.
-- Automated linting before each commit using [pre-commit](), black, and isort.
-- Automated testing and coverage reporting on every commit and pull request using [pytest-cov]() and [codecov.io]().
-- Automated source code documentation using [Sphinx]() and [github pages]().
-- Automated package deployments to [PyPI]() using [github workflows]().
-
+- Metadata and dependency information stored in the pyproject.toml for compatibility with both [pip](https://pip.pypa.io/en/stable/) and [poetry](https://python-poetry.org/docs/).
+- [Flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/index.html), [isort](https://pycqa.github.io/isort/), and [pytest](https://docs.pytest.org/en/latest/) configurations compatible with the [black](https://black.readthedocs.io/en/stable/) autoformatter.
+- Pylint settings based on the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) and adapted for black compatibility.
+- Automated linting before each commit using [pre-commit](https://pre-commit.com/), black, and isort.
+- Automated testing and coverage reports on every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/), [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/), and [codecov.io](https://about.codecov.io/).
+- Automated source code documentation using [Sphinx](https://www.sphinx-doc.org/en/master/) and [github pages](https://docs.github.com/en/pages).
+- Automated package deployments to [PyPI](https://pypi.org/) using [github actions](https://docs.github.com/en/actions).
 
 ## Installation
 
