@@ -32,7 +32,7 @@ A basic python package template which includes proper package structure with a f
 
 ## Setup
 
-Commands should be run from inside the project home (i.e. the location of this README).
+Commands should be run from inside the project home folder (i.e. the location of this README).
 
 Install the package using `poetry`:
 
@@ -40,7 +40,7 @@ Install the package using `poetry`:
 poetry install
 ```
 
-Install optional dependencies using the --extras flag:
+Install optional dependencies using the `--extras` flag:
 
 ```bash
 poetry install --extras={environment}
@@ -68,6 +68,7 @@ docs = [
     "sphinx-rtd-theme",
 ]
 
+# Includes all optional dependencies
 dev = [
     "pytest",
     "pytest-cov",
