@@ -120,29 +120,29 @@ dev = [
 
 ## Commands
 
-`make clean` - Remove all build, testing, and static documentation files.
+- `make clean` - Remove all build, testing, and static documentation files.
 
-`make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
+- `make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
-`make test` - Run the tests using pytest.
+- `make test` - Run the tests using pytest.
 
-`make check` - Run the lint and test commands, followed by the clean command.
+- `make check` - Run the lint and test commands, followed by the clean command.
 
-`make gen-docs` - Generate Sphinx HTML documentation.
+- `make gen-docs` - Generate Sphinx HTML documentation.
 
-`make docs` - Generate Sphinx HTML documentation and serve it to the browser.
+- `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
 
-`make pre-release` - Bump the version and create the release tag.
+- `make pre-release` - Bump the version and create the release tag.
 
-`make release` - Push the release tag and trigger the release pipeline.
+- `make release` - Push the release tag and trigger the release pipeline.
 
 ## Workflows
 
-`lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
+- `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
-`test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io.
+- `test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io.
 
-`build-and-release` - Build a package distribution, create a github release, and publish the distribution to PyPI on every tag creation. Linting and testing steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
+- `build-and-release` - Build a package distribution, create a github release, and publish the distribution to PyPI on every tag creation. Linting and testing steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
 
 ## File Tree
 
