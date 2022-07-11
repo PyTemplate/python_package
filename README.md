@@ -131,9 +131,7 @@ dev = [
 
 - `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
 
-- `make pre-release` - Bump the version and create the release tag.
-
-- `make release` - Push the release tag and trigger the release pipeline.
+- `make pre-release` - Bump the version and create a release tag. Should only be run from the *main* branch.
 
 ## Workflows
 
@@ -142,6 +140,16 @@ dev = [
 - `test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io.
 
 - `build-and-release` - Build a package distribution, create a github release, and publish the distribution to PyPI on every tag creation. Linting and testing steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
+
+## Releases
+
+A release should consist of the following three steps from a clean, up to date, copy of the *main* branch:
+
+1. `make pre-release` - Commit the version number bump and create a new tag locally. The version number follows semantic versioning standards (major.minor.patch) and the tag is simply the version number prepended with a 'v'.
+
+2. `git push` - Update the *main* branch with only the changes from the version bump. Wait until the test and lint workflows have completed successfully before starting the build-and-release workflow.
+
+3. `git push --tags` - Publish the new tag to kick off the build-and-release workflow.
 
 ## File Tree
 
