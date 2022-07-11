@@ -1,4 +1,8 @@
-![pytemplates_green](https://user-images.githubusercontent.com/20674972/178172752-abd4497d-6a0e-416b-9eef-1b1c0dca8477.png)
+<p align="center">
+  <a href="https://user-images.githubusercontent.com/20674972/178172752-abd4497d-6a0e-416b-9eef-1b1c0dca8477.png">
+    <img src="https://user-images.githubusercontent.com/20674972/178172752-abd4497d-6a0e-416b-9eef-1b1c0dca8477.png" alt="Pytemplates Banner">
+  </a>
+</p>
 
 <p align="center">
   <a href="https://github.com/PyTemplate/python_package/actions/workflows/test.yaml">
