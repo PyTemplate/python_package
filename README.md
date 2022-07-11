@@ -149,7 +149,7 @@ dev = [
 
 - `build-and-release` - Build a package distribution, create a github release, and publish the distribution to PyPI on every tag creation. Linting and testing steps must pass before the build process can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
 
-## [Releases](https://github.com/PyTemplate/python_package/releases)
+## Releases
 
 A release should consist of the following three steps from a clean, up to date, copy of the *main* branch:
 
