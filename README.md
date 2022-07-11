@@ -137,7 +137,7 @@ dev = [
 
 - `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
 
-- `make pre-release increment={major/minor/patch}` - Bump the version and create a release tag. Should only be run from the *main* branch. Passes the increment value to bump2version to create a new version number.
+- `make pre-release increment={major/minor/patch}` - Bump the version and create a release tag. Should only be run from the *main* branch. Passes the increment value to bump2version to create a new version number dynamically.
 
 ## Workflows
 
