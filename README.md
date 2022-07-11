@@ -1,14 +1,4 @@
-```bash
-
-                 ___        _____                         _         _
-                / _ \ _   _/__   \ ___  _ __ ___   _ __  | |  __ _ | |_  ___  ___
-               / /_)/| | | | / /\// _ \| '_ ` _ \ | '_ \ | | / _` || __|/ _ \/ __|
-              / ___/ | |_| |/ /  |  __/| | | | | || |_) || || (_| || |_|  __/\__ \
-              \/      \__, |\/    \___||_| |_| |_|| .__/ |_| \__,_| \__|\___||___/
-                      |___/                       |_|
-
-```
-<!-- source - https://patorjk.com/software/taag/#p=display&h=1&f=Ogre&t=PyTemplates -->
+![pytemplates_green](https://user-images.githubusercontent.com/20674972/178172752-abd4497d-6a0e-416b-9eef-1b1c0dca8477.png)
 
 <p align="center">
   <a href="https://github.com/PyTemplate/python_package/actions/workflows/test.yaml">
