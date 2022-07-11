@@ -135,7 +135,7 @@ dev = [
 
 - `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
 
-- `make pre-release` - Bump the version and create a release tag. Should only be run from the *main* branch.
+- `make pre-release increment={major/minor/patch}` - Bump the version and create a release tag. Should only be run from the *main* branch. Passes the increment value to bump2version to create a new version number.
 
 ## Workflows
 
@@ -149,7 +149,7 @@ dev = [
 
 A release should consist of the following three steps from a clean, up to date, copy of the *main* branch:
 
-1. `make pre-release` - Commit the version number bump and create a new tag locally. The version number follows semantic versioning standards (major.minor.patch) and the tag is simply the version number prepended with a 'v'.
+1. `make pre-release increment={major/minor/patch}` - Commit the version number bump and create a new tag locally. The version number follows semantic versioning standards (major.minor.patch) and the tag is simply the version number prepended with a 'v'.
 
 2. `git push` - Update the *main* branch with only the changes from the version bump. Wait until the test and lint workflows have completed successfully before starting the build-and-release workflow.
 
