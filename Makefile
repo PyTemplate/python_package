@@ -42,6 +42,7 @@ clean:  ## clean all build, python, testing, and documentation files
 	rm -fr .tox/
 	rm -fr .coverage
 	rm -fr coverage.xml
+	rm -fr coverage.json
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 	rm -fr .mypy_cache
@@ -66,11 +67,12 @@ docs: ## generate Sphinx HTML documentation and serve to browser
 check: ## run tests / autoformaters / linters / gen-docs
 	make lint
 	pytest
-	make gen-docs
 	make clean
 
 pre-release: ## increment the version and create the release tag
 	make check
+	make gen-docs
+	make clean
 	bump2version $(increment)
 	git push
 	git describe --tags --abbrev=0
