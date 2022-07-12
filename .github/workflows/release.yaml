@@ -87,11 +87,12 @@ jobs:
       run: |
         poetry run make gen-docs
     - name: Publish Docs
-      uses: JamesIves/github-pages-deploy-action@v4
+      uses: JamesIves/github-pages-deploy-action@3.7.1
       with:
-        token: ${{ secrets.GITHUB_TOKEN }}
-        branch: docs
-        folder: docs/build/html/
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        BASE_BRANCH: main # The branch the action should deploy from.
+        BRANCH: docs # The branch the action should deploy to.
+        FOLDER: docs/build/html/ # The folder the action should deploy.
 
   publish-package:
     needs: [test, lint]
