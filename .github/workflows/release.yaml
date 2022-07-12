@@ -30,7 +30,7 @@ jobs:
       run: poetry run pytest
     - name: Generate JSON coverage report
       run: poetry run coverage json
-    - name: Upload codecov
+    - name: Upload report to codecov
       uses: codecov/codecov-action@v3
 
   lint:
@@ -89,10 +89,9 @@ jobs:
     - name: Publish Docs
       uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: main
-        BRANCH: sphinx-docs
-        FOLDER: docs/build/html/
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: docs
+        folder: docs/build/html/
 
   publish-package:
     needs: [test, lint]
