@@ -7,11 +7,11 @@ jobs:
   publish-docs:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2.3.1
+    - uses: actions/checkout@v3
       with:
         persist-credentials: false
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v4
       with:
         python-version: 3.8
     - name: Install Poetry
@@ -24,9 +24,8 @@ jobs:
       run: |
         poetry run make gen-docs
     - name: Publish Docs
-      uses: JamesIves/github-pages-deploy-action@3.7.1
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        BASE_BRANCH: main # The branch the action should deploy from.
-        BRANCH: sphinx-docs # The branch the action should deploy to.
-        FOLDER: docs/build/html/ # The folder the action should deploy.
+        token: ${{ secrets.GITHUB_TOKEN }}
+        branch: sphinx-docs # The branch the action should deploy to.
+        folder: docs/build/html/ # The folder the action should deploy.
