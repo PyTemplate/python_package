@@ -129,11 +129,11 @@ dev = [
 
 - `make clean` - Remove all build, testing, and static documentation files.
 
-- `make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
-
 - `make test` - Run the tests using pytest.
 
-- `make check` - Run the lint and test commands, followed by the clean command.
+- `make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
+
+- `make check` - Run the test and lint commands, followed by the clean command.
 
 - `make gen-docs` - Generate Sphinx HTML documentation.
 

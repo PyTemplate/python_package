@@ -49,18 +49,18 @@ clean:  ## remove all build, testing, and static documentation files
 	rm -fr .mypy_cache
 	$(MAKE) -C docs clean
 
+test: ## run the tests
+	pytest
+
 lint: ## run the linting tools
 	pre-commit run --all-files
 	flake8 src --count --show-source --statistics
 	pylint src -ry
 	mypy src
 
-test: ## run the tests
-	pytest
-
-check: ## run the linting tools and tests, then cleanup
-	make lint
+check: ## run the tests and linting tools, then cleanup
 	make test
+	make lint
 	make clean
 
 gen-docs: ## generate Sphinx HTML documentation
