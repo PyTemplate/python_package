@@ -182,3 +182,15 @@ A release should consist of the following two steps from a tested, linted, and u
     ├── test_module1.py
     └── test_module2.py
 ```
+
+## Credits
+
+### Other python package templates
+
+- https://github.com/waynerv/cookiecutter-pypackage
+- https://github.com/AllenCellModeling/cookiecutter-pypackage
+
+### Actions
+
+- https://github.com/JamesIves/github-pages-deploy-action
+- https://github.com/softprops/action-gh-release
