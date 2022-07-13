@@ -143,23 +143,21 @@ dev = [
 
 ## Workflows
 
-- `test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io.
+- `test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io. Optional manual trigger in the github actions tab.
 
-- `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
+- `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy. Optional manual trigger in the github actions tab.
 
-- `docs` - Build the sphinx documentation, publish to the *sphinx-docs* branch, and release to github pages. Based on a manual workflow trigger.
+- `docs` - Build the sphinx documentation, publish to the *sphinx-docs* branch, and release to github pages. Runs on a manual trigger in the github actions tab.
 
 - `release` - Build a package distribution, create a github release, and publish the distribution to PyPI whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
 
 ## Releases
 
-A release should consist of the following three steps from a clean, up to date, copy of the *main* branch:
+A release should consist of the following two steps from a tested, linted, and up to date copy of the *main* branch:
 
-1. `make pre-release increment={major/minor/patch}` - Commit the version number bump and create a new tag locally. The version number follows semantic versioning standards (major.minor.patch) and the tag is simply the version number prepended with a 'v'.
+1. `make pre-release increment={major/minor/patch}` - Commit the version number bump and create a new tag locally. The version number follows semantic versioning standards (major.minor.patch) and the tag is the version number prepended with a 'v'.
 
-2. `git push` - Update the *main* branch with only the changes from the version bump. Wait until the test and lint workflows have completed successfully before starting the release workflow.
-
-3. `git push --tags` - Publish the new tag to kick off the release workflow.
+2. `git push --follow-tags` - Update the *main* branch with only the changes from the version bump. Publish the new tag and kick off the release workflow.
 
 ## File Tree
 
