@@ -143,7 +143,7 @@ dev = [
 
 ## Workflows
 
-- `test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io. Tests run against python versions 3.6, 3.7, 3.8, and 3.9. Optional manual trigger in the github actions tab.
+- `test` - Run the tests on every push/pull_request to the *main* branch. Writes a coverage report using pytest-cov and uploads it to codecov.io. Tests run against python versions 3.8, and 3.9. Optional manual trigger in the github actions tab.
 
 - `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy. Optional manual trigger in the github actions tab.
 
