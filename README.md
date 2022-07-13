@@ -145,7 +145,7 @@ dev = [
 
 - `make lint` - Run the linting tools. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy.
 
-- `make check` - Run the test and lint commands, followed by the clean command.
+- `make check` - Run the test and lint commands.
 
 - `make gen-docs` - Generate Sphinx HTML documentation.
 
@@ -177,10 +177,10 @@ A release should consist of the following two steps from a tested, linted, and u
 .
 ├── docs/
 ├── LICENSE
+├── README.md
 ├── Makefile
 ├── poetry.lock
 ├── pyproject.toml
-├── README.md
 ├── src
 │   └── pytemplates_pypackage
 │       ├── core
