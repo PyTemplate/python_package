@@ -93,7 +93,7 @@ poetry install --extras=environment
 pip install .
 ```
 
-Install optional dependencies using brackets:
+Install optional dependencies using square brackets:
 
 ```bash
 pip install .[environment]
