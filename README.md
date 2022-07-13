@@ -87,7 +87,7 @@ Install optional dependencies using the `--extras` flag:
 poetry install --extras=environment
 ```
 
-### PIP
+### Pip
 
 ```bash
 pip install .
