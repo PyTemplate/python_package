@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pytemplates_pypackage"
-version = "0.0.10"
+version = "0.1.0"
 description = "A production ready python library template."
 repository = "https://github.com/PyTemplate/python_package"
 authors = ["crabtr26 <crabtr26@gmail.com>"]
