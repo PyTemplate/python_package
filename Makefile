@@ -58,10 +58,9 @@ lint: ## run the linting tools
 	pylint src -ry
 	mypy src
 
-check: ## run the tests and linting tools, then cleanup
+check: ## run the tests and linting tools
 	make test
 	make lint
-	make clean
 
 gen-docs: ## generate Sphinx HTML documentation
 	rm -f docs/source/pytemplates_pypackage*.rst
