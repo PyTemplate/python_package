@@ -75,7 +75,7 @@ wish_farewell(user="Jacob")
 
 ## Developer Setup
 
-### Poetry
+### Using poetry
 
 ```bash
 poetry install
@@ -87,7 +87,7 @@ Install optional dependencies using the `--extras` flag:
 poetry install --extras=environment
 ```
 
-### Pip
+### Using pip
 
 ```bash
 pip install .
