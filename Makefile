@@ -1,18 +1,6 @@
 .PHONY: clean build docs help
 .DEFAULT_GOAL := help
 
-define BROWSER_PYSCRIPT
-import os, webbrowser, sys
-
-try:
-	from urllib import pathname2url
-except:
-	from urllib.request import pathname2url
-
-webbrowser.open("file://" + pathname2url(os.path.abspath(sys.argv[1])))
-endef
-export BROWSER_PYSCRIPT
-
 define PRINT_HELP_PYSCRIPT
 import re, sys
 
@@ -23,8 +11,6 @@ for line in sys.stdin:
 		print("%-20s %s" % (target, help))
 endef
 export PRINT_HELP_PYSCRIPT
-
-BROWSER := python -c "$$BROWSER_PYSCRIPT"
 
 help:
 	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
@@ -47,7 +33,7 @@ clean:  ## remove all build, testing, and static documentation files
 	rm -fr htmlcov/
 	rm -fr .pytest_cache
 	rm -fr .mypy_cache
-	$(MAKE) -C docs clean
+	rm -fr site
 
 test: ## run the tests
 	pytest
@@ -62,15 +48,12 @@ check: ## run the tests and linting tools
 	make test
 	make lint
 
-gen-docs: ## generate Sphinx HTML documentation
-	rm -f docs/source/pytemplates_pypackage*.rst
-	rm -f docs/source/modules.rst
-	sphinx-apidoc -o docs/source src/pytemplates_pypackage
-	$(MAKE) -C docs html
+gen-docs: ## generate HTML documentation
+	mkdocs build
 
-docs: ## generate Sphinx HTML documentation and serve it to the browser
-	make gen-docs
-	$(BROWSER) docs/build/html/index.html
+docs: ## generate HTML documentation and serve it to the browser
+	mkdocs build
+	mkdocs serve
 
 pre-release: ## bump the version and create the release tag
 	make check
