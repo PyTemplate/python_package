@@ -35,13 +35,13 @@
 ### A production ready python library template
 
 - Metadata and dependency information is stored in the pyproject.toml for compatibility with both [pip](https://pip.pypa.io/en/stable/) and [poetry](https://python-poetry.org/docs/).
-- [Flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/index.html), [isort](https://pycqa.github.io/isort/), and [pytest](https://docs.pytest.org/en/latest/) configurations are defined to be compatible with the [black](https://black.readthedocs.io/en/stable/) autoformatter.
+- [Flake8](https://flake8.pycqa.org/en/latest/), [pylint](https://pylint.pycqa.org/en/latest/index.html), and [isort](https://pycqa.github.io/isort/) configurations are defined to be compatible with the [black](https://black.readthedocs.io/en/stable/) autoformatter.
 - Pylint settings are based on the [Google Python Style Guide](https://google.github.io/styleguide/pyguide.html) and adapted for black compatibility.
 - Linting tools run automatically before each commit using [pre-commit](https://pre-commit.com/), black, and isort.
 - Test coverage reports are generated during every commit and pull request using [coverage](https://coverage.readthedocs.io/en/6.4.1/) and [pytest-cov](https://pytest-cov.readthedocs.io/en/latest/). All reports are automatically uploaded and archived on [codecov.io](https://about.codecov.io/).
 - Unit tests are written using [pytest](https://docs.pytest.org/en/latest/) and static type checking is provided by [mypy](http://mypy-lang.org/index.html).
 - Package releases to [PyPI](https://pypi.org/) with dynamic versioning provided by [bump2version](https://github.com/c4urself/bump2version) begin automatically whenever a new tag is created in github.
-- [Sphinx](https://www.sphinx-doc.org/en/master/) documentation is automatically generated and deployed to [github pages](https://docs.github.com/en/pages) during every release.
+- Documentation is built using [mkdocs](https://www.mkdocs.org/) and [mkdocstrings](https://mkdocstrings.github.io/). Docs are automatically deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
 ### [Source code documentation](https://pytemplate.github.io/python_package/)
@@ -74,6 +74,8 @@ wish_farewell(user="Jacob")
 ```
 
 ## Developer Setup
+
+To begin local development, clone the [PyTemplates/typer_cli](https://github.com/PyTemplate/typer_cli) repository and use one of the following methods to build it. Commands should be executed from inside of the project home folder.
 
 ### Using poetry
 
@@ -117,8 +119,10 @@ lint = [
 ]
 
 docs = [
-    "Sphinx",
-    "sphinx-rtd-theme",
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-material",
 ]
 
 # Includes all optional dependencies
@@ -131,8 +135,10 @@ dev = [
     "pylint",
     "mypy",
     "pre-commit",
-    "Sphinx",
-    "sphinx-rtd-theme",
+    "mkdocs",
+    "mkdocstrings",
+    "mkdocstrings-python",
+    "mkdocs-material",
     "bump2version",
 ]
 ```
@@ -147,9 +153,9 @@ dev = [
 
 - `make check` - Run the test and lint commands.
 
-- `make gen-docs` - Generate Sphinx HTML documentation.
+- `make gen-docs` - Generate HTML documentation.
 
-- `make docs` - Generate Sphinx HTML documentation and serve it to the browser.
+- `make docs` - Generate HTML documentation and serve it to the browser.
 
 - `make pre-release increment={major/minor/patch}` - Bump the version and create a release tag. Should only be run from the *main* branch. Passes the increment value to bump2version to create a new version number dynamically. The new version number will be added to *\__version__.py* and *pyproject.toml* and a new commit will be logged. The tag will be created from the new commit.
 
@@ -159,9 +165,9 @@ dev = [
 
 - `lint` - Run the linting tools on every push/pull_request to the *main* branch. Includes pre-commit hooks, black, isort, flake8, pylint, and mypy. Optional manual trigger in the github actions tab.
 
-- `docs` - Build the sphinx documentation, publish to the *sphinx-docs* branch, and release to github pages. Runs on a manual trigger in the github actions tab.
+- `docs` - Build the documentation, publish to the *docs* branch, and release to github pages. Runs on a manual trigger in the github actions tab.
 
-- `release` - Build a package distribution, create a github release, and publish the distribution to PyPI whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Sphinx documentation is automatically published to the *sphinx-docs* branch and hosted on github pages.
+- `release` - Build a wheel distribution, build a docker image, create a github release, and publish to PyPI and Docker Hub whenever a new tag is created. Linting and testing steps must pass before the release steps can begin. Documentation is automatically published to the *docs* branch and hosted on github pages. All github release tags, docker image tags, and PyPI version numbers are in agreement with one another and follow semantic versioning standrads.
 
 ## Releases
 
@@ -175,12 +181,28 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ```bash
 .
-├── docs/
+├── docs
+│   ├── code_reference
+│   │   ├── module1.md
+│   │   └── module2.md
+│   ├── developer_guide
+│   │   ├── commands.md
+│   │   ├── developer_setup.md
+│   │   ├── releases.md
+│   │   └── workflows.md
+│   ├── extras
+│   │   ├── credits.md
+│   │   └── file_tree.md
+│   ├── index.md
+│   └── user_guide
+│       ├── installation.md
+│       └── usage.md
 ├── LICENSE
-├── README.md
 ├── Makefile
+├── mkdocs.yml
 ├── poetry.lock
 ├── pyproject.toml
+├── README.md
 ├── src
 │   └── pytemplates_pypackage
 │       ├── core
@@ -199,10 +221,10 @@ A release should consist of the following two steps from a tested, linted, and u
 
 ### Other python package templates
 
-- https://github.com/waynerv/cookiecutter-pypackage
-- https://github.com/AllenCellModeling/cookiecutter-pypackage
+- [https://github.com/waynerv/cookiecutter-pypackage](https://github.com/waynerv/cookiecutter-pypackage)
+- [https://github.com/AllenCellModeling/cookiecutter-pypackage](https://github.com/AllenCellModeling/cookiecutter-pypackage)
 
 ### Actions
 
-- https://github.com/JamesIves/github-pages-deploy-action
-- https://github.com/softprops/action-gh-release
+- [https://github.com/JamesIves/github-pages-deploy-action](https://github.com/JamesIves/github-pages-deploy-action)
+- [https://github.com/softprops/action-gh-release](https://github.com/softprops/action-gh-release)
