@@ -89,8 +89,8 @@ jobs:
       uses: JamesIves/github-pages-deploy-action@v4
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        branch: docs # The branch the action should deploy to.
-        folder: site/ # The folder the action should deploy.
+        branch: docs
+        folder: site/
 
   publish-package:
     needs: [test, lint]

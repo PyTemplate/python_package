@@ -44,7 +44,7 @@
 - Documentation is built using [mkdocs](https://www.mkdocs.org/) and [mkdocstrings](https://mkdocstrings.github.io/). Docs are automatically deployed to [github pages](https://docs.github.com/en/pages) during every release.
 - Release notes are automatically generated during every release using [github actions](https://docs.github.com/en/actions).
 
-### [Source code documentation](https://pytemplate.github.io/python_package/)
+### [Full Documentation](https://pytemplate.github.io/python_package/)
 
 ## Installation
 
